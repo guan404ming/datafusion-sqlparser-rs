@@ -80,6 +80,7 @@ pub struct Insert {
     /// RETURNING
     pub returning: Option<Vec<SelectItem>>,
     /// OUTPUT (MSSQL)
+    /// See <https://learn.microsoft.com/en-us/sql/t-sql/queries/output-clause-transact-sql>
     pub output: Option<OutputClause>,
     /// Only for mysql
     pub replace_into: bool,
@@ -297,6 +298,7 @@ pub struct Delete {
     /// RETURNING
     pub returning: Option<Vec<SelectItem>>,
     /// OUTPUT (MSSQL)
+    /// See <https://learn.microsoft.com/en-us/sql/t-sql/queries/output-clause-transact-sql>
     pub output: Option<OutputClause>,
     /// ORDER BY (MySQL)
     pub order_by: Vec<OrderByExpr>,
@@ -381,6 +383,7 @@ pub struct Update {
     /// RETURNING
     pub returning: Option<Vec<SelectItem>>,
     /// OUTPUT (MSSQL)
+    /// See <https://learn.microsoft.com/en-us/sql/t-sql/queries/output-clause-transact-sql>
     pub output: Option<OutputClause>,
     /// SQLite-specific conflict resolution clause
     pub or: Option<SqliteOnConflict>,
